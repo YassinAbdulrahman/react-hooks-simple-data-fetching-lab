@@ -8,7 +8,7 @@ function App() {
         fetch('https://dog.ceo/api/breeds/image/random')
             .then(res => res.json())
             .then(data => setSrc(data.message))
-            .then(setIsLoading(true))
+            .then(error => setIsLoading(true))
     }, [])
     if (!isLoding) return <p>Loading...</p>;
     return (
